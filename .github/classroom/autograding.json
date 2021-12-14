@@ -1,0 +1,394 @@
+{
+  "tests": [
+    {
+      "name": "Setup All librairies",
+      "setup": "sudo apt-get update -y; sudo apt-get install -y xorg-dev libx11-dev libgl1-mesa-glx; pip install nose2 pygame PyOpenGL numpy",
+      "run": "echo \"Installed librairies for TP 3\"",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 0
+    },
+    {
+      "name": "1A - Teste si l'objet configuration est bien défini",
+      "setup": "",
+      "run": "cd tests; nose2 -s . test_base.TestQuestion1A",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "1B - Teste si la configuration existe bien",
+      "setup": "",
+      "run": "cd tests; nose2 -s . test_base.TestQuestion1B.test_configuration_exists",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "1B - Teste la position de l'écran",
+      "setup": "",
+      "run": "cd tests; nose2 -s . test_base.TestQuestion1B.test_screen_position_is_good",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "1B - Teste si la couleur de l'axe x est bonne",
+      "setup": "",
+      "run": "cd tests; nose2 -s . test_base.TestQuestion1B.test_xaxis_color_is_good",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "1B - Teste si la couleur de l'axe y est bonne",
+      "setup": "",
+      "run": "cd tests; nose2 -s . test_base.TestQuestion1B.test_yaxis_color_is_good",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "1C - Teste si l'objet configuration existe",
+      "setup": "",
+      "run": "cd tests; nose2 -s . test_base.TestQuestion1C.test_configuration_exists",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "1C - Teste si la matrice de transformation prends bien en compte la rotation pour avoir l'axe z dans le bon sens.",
+      "setup": "",
+      "run": "cd tests; nose2 -s . test_base.TestQuestion1C.test_transformation_matrix_is_good",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "1D - Teste si l'objet configuration existe",
+      "setup": "",
+      "run": "cd tests; nose2 -s . test_interaction_utilisateur.TestQuestion1D.test_configuration_exists",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "1D - Teste si l'appui de Pageup fait bien un zoom de 1.1",
+      "setup": "",
+      "run": "cd tests; nose2 -s . test_interaction_utilisateur.TestQuestion1D.test_pageup",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "1D - Teste si l'appui de Pagedown fait bien un zoom de 1/1.1",
+      "setup": "",
+      "run": "cd tests; nose2 -s . test_interaction_utilisateur.TestQuestion1D.test_pagedown",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "1E - Teste si l'objet configuration existe",
+      "setup": "",
+      "run": "cd tests; nose2 -s . test_interaction_utilisateur.TestQuestion1E.test_configuration_exists",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "1E - Teste si la molette vers le haut fait bien un zoom de 1.1",
+      "setup": "",
+      "run": "cd tests; nose2 -s . test_interaction_utilisateur.TestQuestion1E.test_wheelup",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "1E - Teste si la molette vers le bas fait bien un zoom de 1/1.1",
+      "setup": "",
+      "run": "cd tests; nose2 -s . test_interaction_utilisateur.TestQuestion1E.test_wheeldown",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "1F - Teste si l'objet configuration existe",
+      "setup": "",
+      "run": "cd tests; nose2 -s . test_interaction_utilisateur.TestQuestion1F.test_configuration_exists",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "2 - Teste si l'objet configuration existe",
+      "setup": "",
+      "run": "cd tests; nose2 -s . test_section.TestSection.test_configuration_exists",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "2 - Teste si l'objet Section existe",
+      "setup": "",
+      "run": "cd tests; nose2 -s . test_section.TestSection.test_Section_exists",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "2 - Teste si la liste vertices existe",
+      "setup": "",
+      "run": "cd tests; nose2 -s . test_section.TestSection.test_vertices_exists",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "2 - Teste si la liste faces existe",
+      "setup": "",
+      "run": "cd tests; nose2 -s . test_section.TestSection.test_faces_exists",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "2 - Teste si la longueur de la liste vertices est bonne",
+      "setup": "",
+      "run": "cd tests; nose2 -s . test_section.TestSection.test_vertices_length",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "2 - Teste si la longueur de a liste faces est bonne",
+      "setup": "",
+      "run": "cd tests; nose2 -s . test_section.TestSection.test_faces_length",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "2 - Teste si la largeur de la section est bonne",
+      "setup": "",
+      "run": "cd tests; nose2 -s . test_section.TestSection.test_width_is_right",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "2 - Teste si la hauteur de la section est bonne",
+      "setup": "",
+      "run": "cd tests; nose2 -s . test_section.TestSection.test_height_is_right",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "2 - Teste si la profondeur de la section est bonne",
+      "setup": "",
+      "run": "cd tests; nose2 -s . test_section.TestSection.test_thickness_is_right",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "3 - Teste si l'objet configuration existe",
+      "setup": "",
+      "run": "cd tests; nose2 -s . test_wall.TestWall.test_configuration_exists",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "3 - Teste si l'objet Wall existe",
+      "setup": "",
+      "run": "cd tests; nose2 -s . test_wall.TestWall.test_Wall_exists",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "3 - Teste si l'objet Wall est bien constitué d'une seule section",
+      "setup": "",
+      "run": "cd tests; nose2 -s . test_wall.TestWall.test_Wall_is_one_section",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "4 - Teste si l'objet configuration existe",
+      "setup": "",
+      "run": "cd tests; nose2 -s . test_house.TestHouse.test_configuration_exists",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "4 - Teste si l'objet House existe",
+      "setup": "",
+      "run": "cd tests; nose2 -s . test_house.TestHouse.test_House_exists",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "4 - Teste si la maison est constituée de 4 mures",
+      "setup": "",
+      "run": "cd tests; nose2 -s . test_house.TestHouse.test_House_is_four_walls",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "5 - Teste la longueur de la liste vertices dans Opening",
+      "setup": "",
+      "run": "cd tests; nose2 -s . test_opening.TestOpeningClass.test_Opening_vertices_length",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "5 - Teste la longueur de la liste faces dans Opening",
+      "setup": "",
+      "run": "cd tests; nose2 -s . test_opening.TestOpeningClass.test_Opening_faces_length",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "5 - Teste si la sortie de canCreateOpening est un booléen",
+      "setup": "",
+      "run": "cd tests; nose2 -s . test_opening.TestSectionCreateOpening.test_canCreateopening_is_boolean",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "5 - Teste si la méthode canCreateopening marche bien sur l'exemple de test",
+      "setup": "",
+      "run": "cd tests; nose2 -s . test_opening.TestSectionCreateOpening.test_canCreateopening_works",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "5 - Teste la longeur des sections pour le cas général.",
+      "setup": "",
+      "run": "cd tests; nose2 -s . test_opening.TestCreateNewSections.test_length_new_sections_general",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "5 - Teste la longeur des sections pour le cas pas de section à gauche.",
+      "setup": "",
+      "run": "cd tests; nose2 -s . test_opening.TestCreateNewSections.test_length_new_sections_left",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "5 - Teste la longeur des sections pour le cas pas de section à droite.",
+      "setup": "",
+      "run": "cd tests; nose2 -s . test_opening.TestCreateNewSections.test_length_new_sections_right",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "5 - Teste la longeur des sections pour le cas pas de section en haut.",
+      "setup": "",
+      "run": "cd tests; nose2 -s . test_opening.TestCreateNewSections.test_length_new_sections_top",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "5 - Teste la longeur des sections pour le cas pas de section en bas.",
+      "setup": "",
+      "run": "cd tests; nose2 -s . test_opening.TestCreateNewSections.test_length_new_sections_bottom",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    }
+  ]
+}
