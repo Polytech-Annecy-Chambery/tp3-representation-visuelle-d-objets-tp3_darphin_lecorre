@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?> <!-- Created with Vectornator for iOS (http://vectornator.io/) --><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg height="100%" style="fill-rule:nonzero;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="100%" xmlns:vectornator="http://vectornator.io" version="1.1" viewBox="0 0 841.995 595.35">
+<metadata>
+<vectornator:setting key="DimensionsVisible" value="1"/>
+<vectornator:setting key="PencilOnly" value="0"/>
+<vectornator:setting key="SnapToPoints" value="0"/>
+<vectornator:setting key="OutlineMode" value="0"/>
+<vectornator:setting key="CMYKEnabledKey" value="0"/>
+<vectornator:setting key="RulersVisible" value="1"/>
+<vectornator:setting key="SnapToEdges" value="0"/>
+<vectornator:setting key="GuidesVisible" value="1"/>
+<vectornator:setting key="DisplayWhiteBackground" value="1"/>
+<vectornator:setting key="doHistoryDisabled" value="0"/>
+<vectornator:setting key="SnapToGuides" value="1"/>
+<vectornator:setting key="TimeLapseWatermarkDisabled" value="0"/>
+<vectornator:setting key="Units" value="Millimeters"/>
+<vectornator:setting key="DynamicGuides" value="0"/>
+<vectornator:setting key="IsolateActiveLayer" value="0"/>
+<vectornator:setting key="SnapToGrid" value="0"/>
+</metadata>
+<defs/>
+<g id="Calque 1" vectornator:layerName="Calque 1">
+<path stroke="#000000" stroke-width="1" d="M762.102+335L199.186+10L199.186+230L762.102+555L762.102+335Z" fill="#ffffff" stroke-linecap="round" opacity="1" stroke-linejoin="round"/>
+<g opacity="1">
+<path stroke="#000000" stroke-width="1" d="M623.538+135L623.538+205L684.16+170L684.16+100L623.538+135Z" fill="#ffffff" stroke-linecap="round" opacity="1" stroke-linejoin="round"/>
+<path stroke="#000000" stroke-width="1" d="M562.917+100L623.538+135L623.538+205L562.917+170L562.917+100Z" fill="#ffffff" stroke-linecap="round" opacity="1" stroke-linejoin="round"/>
+<path stroke="#000000" stroke-width="1" d="M623.538+65L684.16+100L623.538+135L562.917+100L623.538+65Z" fill="#ffffff" stroke-linecap="round" opacity="1" stroke-linejoin="round"/>
+</g>
+<g opacity="1">
+<g opacity="1">
+<path d="M251.173+425.496L251.173+345.496" fill="#ffffff"/>
+<g>
+<path stroke-linecap="round" stroke-width="1" stroke="#000000" d="M251.173+348.997C251.173+355.588+251.173+425.496+251.173+425.496" fill="none" stroke-linejoin="round"/>
+<path d="M251.173+349.872L254.673+352.497L251.173+345.497L247.673+352.497L251.173+349.872Z" fill="#000000"/>
+</g>
+</g>
+<g opacity="1">
+<path d="M251.173+425.496L320.455+465.496" fill="#ffffff"/>
+<g>
+<path stroke-linecap="round" stroke-width="1" stroke="#000000" d="M317.423+463.746C311.715+460.45+251.173+425.496+251.173+425.496" fill="none" stroke-linejoin="round"/>
+<path d="M316.665+463.308L312.642+465.027L320.454+465.496L316.142+458.965L316.665+463.308Z" fill="#000000"/>
+</g>
+</g>
+<g opacity="1">
+<path d="M251.173+425.496L181.891+465.496" fill="#ffffff"/>
+<g>
+<path stroke-linecap="round" stroke-width="1" stroke="#000000" d="M184.923+463.746C190.631+460.45+251.173+425.496+251.173+425.496" fill="none" stroke-linejoin="round"/>
+<path d="M185.68+463.308L186.204+458.965L181.891+465.496L189.704+465.027L185.68+463.308Z" fill="#000000"/>
+</g>
+</g>
+<g opacity="1">
+<path d="M239.18+422.207C239.946+422.207+240.472+421.788+240.759+420.949C241.045+420.111+241.188+418.897+241.188+417.309C241.188+416.043+241.102+415.033+240.93+414.277C240.607+412.871+240.003+412.168+239.118+412.168C238.232+412.168+237.626+412.892+237.298+414.34C237.126+415.111+237.04+416.126+237.04+417.387C237.04+418.569+237.128+419.514+237.305+420.223C237.639+421.546+238.264+422.207+239.18+422.207ZM239.157+411.746C240.355+411.746+241.285+412.374+241.946+413.629C242.472+414.645+242.735+415.811+242.735+417.129C242.735+418.165+242.574+419.142+242.251+420.059C241.641+421.783+240.587+422.645+239.087+422.645C238.061+422.645+237.217+422.178+236.555+421.246C235.847+420.251+235.493+418.9+235.493+417.191C235.493+415.848+235.73+414.691+236.204+413.723C236.844+412.405+237.829+411.746+239.157+411.746Z" opacity="1" fill="#000000"/>
+</g>
+</g>
+<path stroke="#000000" stroke-width="1" d="M250.974+425.887L623.742+135.318" fill="none" stroke-linecap="round" opacity="0.471741" stroke-linejoin="round" stroke-dasharray="0,0,3,6"/>
+<path stroke="#000000" stroke-width="1" d="M250.829+425.93L564.107+99.3103" fill="none" stroke-linecap="round" opacity="0.471741" stroke-linejoin="round" stroke-dasharray="0,0,3,6"/>
+<path stroke="#000000" stroke-width="1" d="M251.224+425.86L624.134+205.064" fill="none" stroke-linecap="round" opacity="0.471741" stroke-linejoin="round" stroke-dasharray="0,0,3,6"/>
+<path stroke="#000000" stroke-width="1" d="M250.715+425.46L564.083+169.354" fill="none" stroke-linecap="round" opacity="0.471741" stroke-linejoin="round" stroke-dasharray="0,0,3,6"/>
+<path stroke="#000000" stroke-width="1" d="M443.146+226.013L480.465+247.269L480.713+290.274L441.662+269.018L443.146+226.013Z" fill="none" stroke-linecap="round" opacity="1" stroke-linejoin="round"/>
+<path d="M480.671+288.664L480.671+288.664C481.702+288.664+482.537+289.426+482.537+290.366L482.537+290.664C482.537+291.604+481.702+292.366+480.671+292.366L480.671+292.366C479.64+292.366+478.805+291.604+478.805+290.664L478.805+290.366C478.805+289.426+479.64+288.664+480.671+288.664Z" opacity="1" fill="#000000"/>
+<path d="M480.198+245.532L480.198+245.532C481.229+245.532+482.064+246.294+482.064+247.234L482.064+247.532C482.064+248.472+481.229+249.234+480.198+249.234L480.198+249.234C479.168+249.234+478.332+248.472+478.332+247.532L478.332+247.234C478.332+246.294+479.168+245.532+480.198+245.532Z" opacity="1" fill="#000000"/>
+<path d="M443.242+223.421L443.242+223.421C444.272+223.421+445.108+224.183+445.108+225.123L445.108+225.421C445.108+226.361+444.272+227.123+443.242+227.123L443.242+227.123C442.211+227.123+441.376+226.361+441.376+225.421L441.376+225.123C441.376+224.183+442.211+223.421+443.242+223.421Z" opacity="1" fill="#000000"/>
+<path d="M441.848+266.94L441.848+266.94C442.879+266.94+443.714+267.702+443.714+268.642L443.714+268.94C443.714+269.88+442.879+270.642+441.848+270.642L441.848+270.642C440.817+270.642+439.982+269.88+439.982+268.94L439.982+268.642C439.982+267.702+440.817+266.94+441.848+266.94Z" opacity="1" fill="#000000"/>
+</g>
+</svg>
