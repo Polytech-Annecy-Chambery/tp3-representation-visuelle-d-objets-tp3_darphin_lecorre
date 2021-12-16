@@ -48,34 +48,103 @@ class Section:
     # Setter
     def setParameter(self, parameterKey, parameterValue):
         self.parameters[parameterKey] = parameterValue
-        return self     
-
     # Defines the vertices and faces 
     def generate(self):
         self.vertices = [ 
-                # Définir ici les sommets
+                [0, 0, 0 ], 
+                [0, 0, self.parameters['height']], 
+                [self.parameters['width'], 0, self.parameters['height']],
+                [self.parameters['width'], 0, 0],
+                [0, self.parameters['thickness'], 0],
+				[0, self.parameters['thickness'], self.parameters['height']], 
+                [self.parameters['width'], self.parameters['thickness'], self.parameters['height']],
+                [self.parameters['width'], self.parameters['thickness'], 0]
                 ]
         self.faces = [
-                # définir ici les faces
-                ]   
+                [0, 1, 2, 3],
+                [0, 1, 5, 4],
+                [2, 3, 7, 6],
+                [0, 3, 7, 4],
+                [1, 2, 6, 5],
+                [4, 5, 6, 7],
+                ] 
+        return self 
 
     # Checks if the opening can be created for the object x
     def canCreateOpening(self, x):
-        # A compléter en remplaçant pass par votre code
-        pass      
+        if x.parameters['position'][0] + x.parameters['width'] < self.parameters['position'][0] + self.parameters['width'] and x.parameters['position'][2] + x.parameters['height'] < self.parameters['position'][2] + self.parameters['height'] and x.parameters['thickness'] == self.parameters['thickness'] :
+            return True
+        else:
+            return False
         
     # Creates the new sections for the object x
     def createNewSections(self, x):
-        # A compléter en remplaçant pass par votre code
-        pass              
-        
+        l =[]
+        if x.parameters['position'][0] != self.parameters['position'][0] :
+            subsection1 = Section({'width': abs(self.parameters['position'][0] - x.parameters['position'][0]),
+                                   'height': self.parameters['height'],
+                                   'thickness': self.parameters['thickness'],
+                                   'color': self.parameters['color'],
+                                   'edges': self.parameters['edges'],
+                                   'position': self.parameters['position']})
+            l.append(subsection1)
+        if (self.parameters['position'][2] - x.parameters['position'][2] + x.parameters['height']) != self.parameters['height']:
+            subsection2 = Section({'width': x.parameters['width'],
+                                   'height': self.parameters['height'] - ((x.parameters['position'][2] - self.parameters['position'][2]) + x.parameters['height']),
+                                   'thickness': self.parameters['thickness'],
+                                   'color': self.parameters['color'],
+                                   'edges': self.parameters['edges'],
+                                   'position': [ x.parameters['position'][0],  self.parameters['position'][1], (x.parameters['position'][2] + x.parameters['height'])]})
+            l.append(subsection2)
+        if x.parameters['position'][2] != self.parameters['position'][2] :
+            subsection3 = Section({'width': x.parameters['width'],
+                                    'height': abs(self.parameters['position'][2] - x.parameters['position'][2]),
+                                    'thickness': self.parameters['thickness'],
+                                    'color': self.parameters['color'],
+                                    'edges': self.parameters['edges'],
+                                    'position': [ x.parameters['position'][0],  self.parameters['position'][1], self.parameters['position'][2]]})
+            l.append(subsection3)
+        if (x.parameters['position'][0] - self.parameters['position'][0] + x.parameters['width']) != self.parameters['width']:
+            subsection4 = Section({'width': self.parameters['width'] - (x.parameters['position'][0] - self.parameters['position'][0] + x.parameters['width']),
+                                    'height': self.parameters['height'],
+                                    'thickness': self.parameters['thickness'],
+                                    'color': self.parameters['color'],
+                                    'edges': self.parameters['edges'],
+                                    'position': [ (x.parameters['position'][0] + x.parameters['width']),  self.parameters['position'][1], self.parameters['position'][2]]})
+            l.append(subsection4)
+        return l
     # Draws the edges
     def drawEdges(self):
-        # A compléter en remplaçant pass par votre code
-        pass           
+        f = self.faces
+        v = self.vertices
+        for i in f :
+            a,b,c,d = v[i[0]],v[i[1]],v[i[2]],v[i[3]]
+            gl.glPolygonMode(gl.GL_FRONT_AND_BACK,gl.GL_LINE) # on trace les edges : GL_LINE
+            gl.glBegin(gl.GL_QUADS) # Tracé d’un quadrilatère
+            gl.glColor3fv([0, 0, 0]) # Couleur noir
+            gl.glVertex3fv(a)
+            gl.glVertex3fv(b)
+            gl.glVertex3fv(c)
+            gl.glVertex3fv(d)
+            gl.glEnd()
                     
     # Draws the faces
     def draw(self):
-        # A compléter en remplaçant pass par votre code
-        pass
-  
+        gl.glPushMatrix()
+        gl.glTranslated(self.parameters['position'][0], self.parameters['position'][1], self.parameters['position'][2])
+        gl.glRotatef(self.parameters['orientation'], 0, 0, 1)
+        if self.parameters['edges'] == True :
+            self.drawEdges()
+        f = self.faces
+        v = self.vertices
+        for i in f :
+            a,b,c,d = v[i[0]],v[i[1]],v[i[2]],v[i[3]]
+            gl.glPolygonMode(gl.GL_FRONT_AND_BACK, gl.GL_FILL) # on trace les faces : GL_FILL
+            gl.glBegin(gl.GL_QUADS) # Tracé d’un quadrilatère
+            gl.glColor3fv(self.parameters['color']) # Couleur gris moyen
+            gl.glVertex3fv(a)
+            gl.glVertex3fv(b)
+            gl.glVertex3fv(c)
+            gl.glVertex3fv(d)
+            gl.glEnd()  
+        gl.glPopMatrix()

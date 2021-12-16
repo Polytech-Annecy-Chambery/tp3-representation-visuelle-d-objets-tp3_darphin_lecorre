@@ -16,13 +16,12 @@ import copy
 
 
 def Q1a():
-    pass
+    return Configuration()
     
 def Q1b_f():
     return Configuration({'screenPosition': -5, 'xAxisColor': [1, 1, 0]}). \
         setParameter('xAxisColor', [1, 1, 0]). \
-        setParameter('yAxisCo lor', [0,1,1]). \
-        display()
+        setParameter('yAxisColor', [0,1,1])
         
 def Q2b():
     # Ecriture en utilisant le chaînage
@@ -37,14 +36,16 @@ def Q2c():
             )
 
 def Q3a():
-    pass  
+    return Configuration().add(
+        Wall({'position': [1, 1, 0], 'width':7, 'height':2.6, 'edges': True, 'orientation':69})
+        ) 
 
 def Q4a():
     # Ecriture en utilisant des variables : A compléter
-    wall1 = Wall(...)
-    wall2 = Wall(...)
-    wall3 = Wall(...)
-    wall4 = Wall(...)  
+    wall1 = Wall({'position': [0, 0, 0], 'width':10, 'height':3, 'thickness':1, 'edges': True, 'orientation':0})
+    wall2 = Wall({'position': [11, 0, 0], 'width':6, 'height':3, 'thickness':1, 'edges': True, 'orientation':90})
+    wall3 = Wall({'position': [11, 7, 0], 'width':10, 'height':3, 'thickness':1, 'edges': True, 'orientation':180})
+    wall4 = Wall({'position': [0, 7, 0], 'width':6, 'height':3, 'thickness':1, 'edges': True, 'orientation':-90})  
     house = House({'position': [-3, 1, 0], 'orientation':0})
     house.add(wall1).add(wall3).add(wall4).add(wall2)
     return Configuration().add(house)   
@@ -70,7 +71,7 @@ def Q5b():
 def Q5c1():      
     section = Section({'width':7, 'height':2.6})
     opening1 = Opening({'position': [2, 0, 0], 'width':0.9, 'height':2.15, 'thickness':0.2, 'color': [0.7, 0.7, 0.7]})
-    sections = section.createOpening(opening1)
+    sections = section.createNewSections(opening1)
     configuration = Configuration()
     for x in sections:
         configuration.add(x)    
@@ -86,10 +87,27 @@ def Q5c2():
     return configuration    
 
 def Q5d():      
-    pass
-    
+    wall = Wall({'width':7, 'height':2.6,})
+    opening1 = Opening({'position': [2, 0, 0], 'width':0.9, 'height':2.15, 'thickness':0.2, 'color': [0.7, 0.7, 0.7]})
+    opening2 = Opening({'position': [4, 0, 1.2], 'width':1.25, 'height':1, 'thickness':0.2, 'color': [0.7, 0.7, 0.7]})
+    wall.add(opening1)
+    wall.add(opening2)
+    configuration = Configuration()
+    configuration.add(wall)
+    return configuration
 def Q6():  
-    pass  
+    mur = Wall({'width':7, 'height':2.6,})
+    opening1 = Opening({'position': [2, 0, 0], 'width':0.9, 'height':2.15, 'thickness':0.2, 'color': [0.7, 0.7, 0.7]})
+    opening2 = Opening({'position': [4, 0, 1.2], 'width':1.25, 'height':1, 'thickness':0.2, 'color': [0.7, 0.7, 0.7]})
+    porte = Door({'position': [2, 0.1, 0], 'width':0.9, 'height':2.15})
+    fenetre = Window({'position': [4, 0.1, 1.2], 'width':1.25, 'height':1})
+    mur.add(opening1)
+    mur.add(opening2)
+    configuration = Configuration()
+    configuration.add(mur)
+    configuration.add(porte)
+    configuration.add(fenetre)
+    return configuration
  
 def main():
     # Enlever un des commentaires pour la question traitée
@@ -99,7 +117,7 @@ def main():
     # configuration = Q2b()
     # configuration = Q2c()
     # configuration = Q3a()
-    # configuration = Q4a()
+    # configuration = Q4a() 
     # configuration = Q5a()
     # configuration = Q5b()
     # configuration = Q5c1()

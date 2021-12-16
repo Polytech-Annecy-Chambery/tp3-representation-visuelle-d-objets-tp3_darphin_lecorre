@@ -32,16 +32,19 @@ class Wall:
         if 'thickness' not in self.parameters:
             self.parameters['thickness'] = 0.2    
         if 'color' not in self.parameters:
-            self.parameters['color'] = [0.5, 0.5, 0.5]       
+            self.parameters['color'] = [0.5, 0.5, 0.5]
+        if 'edges' not in self.parameters:
+            self.parameters['edges'] = False
             
         # Objects list
         self.objects = []
 
         # Adds a Section for this object
-        self.parentSection = Section({'width': self.parameters['width'], \
-                                      'height': self.parameters['height'], \
-                                      'thickness': self.parameters['thickness'], \
+        self.parentSection = Section({'width': self.parameters['width'],
+                                      'height': self.parameters['height'],
+                                      'thickness': self.parameters['thickness'],
                                       'color': self.parameters['color'],
+                                      'edges': self.parameters['edges'],
                                       'position': self.parameters['position']})
         self.objects.append(self.parentSection) 
         
@@ -62,12 +65,16 @@ class Wall:
         return None
     
     # Adds an object    
-    def add(self, x):    
-        # A compléter en remplaçant pass par votre code
-        pass        
+    def add(self, x):  
+        S = self.findSection(x)
+        if S[1].canCreateOpening(x):
+            l = S[1].createNewSections(x)
+            self.objects.pop(S[0])
+            self.objects.extend(l)
+        
                     
     # Draws the faces
     def draw(self):
-        # A compléter en remplaçant pass par votre code
-        pass
-  
+        for x in self.objects: 
+            x.draw() 
+
